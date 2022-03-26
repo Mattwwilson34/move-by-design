@@ -1,6 +1,8 @@
 import './Nav.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Media from 'react-media';
+import HamburgerNavMenu from '../HamburgerNavMenu';
 
 const Nav = () => {
   const links = [
@@ -29,21 +31,29 @@ const Nav = () => {
           {({ isActive }) => (isActive ? 'LOGO' : 'HOME')}
         </NavLink>
       </div>
-      <div className='Nav__NavLinkContainer'>
-        {links.map((link) => {
-          return (
-            <NavLink
-              key={link.link}
-              className='Nav__NavLink'
-              to={link.link}
-              style={({ isActive }) => {
-                return { color: isActive ? 'red' : '' };
-              }}>
-              {link.label}
-            </NavLink>
-          );
-        })}
-      </div>
+      <Media query={{ maxWidth: 776 }}>
+        {(matches) =>
+          matches ? (
+            <HamburgerNavMenu />
+          ) : (
+            <div className='Nav__NavLinkContainer'>
+              {links.map((link) => {
+                return (
+                  <NavLink
+                    key={link.link}
+                    className='Nav__NavLink'
+                    to={link.link}
+                    style={({ isActive }) => {
+                      return { color: isActive ? 'red' : '' };
+                    }}>
+                    {link.label}
+                  </NavLink>
+                );
+              })}
+            </div>
+          )
+        }
+      </Media>
     </div>
   );
 };
