@@ -24,7 +24,11 @@ const Nav = () => {
 
   return (
     <div className='Nav'>
-      <div className='Nav__Logo'>LOGO</div>
+      <div className='Nav__Logo'>
+        <NavLink to='/'>
+          {({ isActive }) => (isActive ? 'LOGO' : 'HOME')}
+        </NavLink>
+      </div>
       <div className='Nav__NavLinkContainer'>
         {links.map((link) => {
           return (
