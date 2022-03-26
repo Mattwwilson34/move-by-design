@@ -3,20 +3,40 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
+  const links = [
+    {
+      link: 'about',
+      label: 'About',
+    },
+    {
+      link: 'contact',
+      label: 'Contact',
+    },
+    {
+      link: 'testimonials',
+      label: 'Testimonials',
+    },
+    {
+      link: 'movement-archive',
+      label: 'Movement Archive',
+    },
+  ];
+
   return (
     <div>
-      <NavLink className='Nav__Link' to='about'>
-        About
-      </NavLink>
-      <NavLink className='Nav__Link' to='contact'>
-        Contact
-      </NavLink>
-      <NavLink className='Nav__Link' to='Testimonials'>
-        Testimonials
-      </NavLink>
-      <NavLink className='Nav__Link' to='Movement-Archive'>
-        Movement Archive
-      </NavLink>
+      {links.map((link) => {
+        return (
+          <NavLink
+            key={link.link}
+            className='Nav__NavLink'
+            to={link.link}
+            style={({ isActive }) => {
+              return { color: isActive ? 'red' : '' };
+            }}>
+            {link.label}
+          </NavLink>
+        );
+      })}
     </div>
   );
 };
