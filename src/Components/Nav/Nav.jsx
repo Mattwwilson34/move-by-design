@@ -23,20 +23,23 @@ const Nav = () => {
   ];
 
   return (
-    <div>
-      {links.map((link) => {
-        return (
-          <NavLink
-            key={link.link}
-            className='Nav__NavLink'
-            to={link.link}
-            style={({ isActive }) => {
-              return { color: isActive ? 'red' : '' };
-            }}>
-            {link.label}
-          </NavLink>
-        );
-      })}
+    <div className='Nav'>
+      <div className='Nav__Logo'>LOGO</div>
+      <div className='Nav__NavLinkContainer'>
+        {links.map((link) => {
+          return (
+            <NavLink
+              key={link.link}
+              className='Nav__NavLink'
+              to={link.link}
+              style={({ isActive }) => {
+                return { color: isActive ? 'red' : '' };
+              }}>
+              {link.label}
+            </NavLink>
+          );
+        })}
+      </div>
     </div>
   );
 };
