@@ -29,9 +29,11 @@
   color: black;
   text-decoration: none;
 }
-.Nav__NavLink:before {
+.Nav__NavLink:visited {
   color: black;
 }
-.Nav__NavLink:after {
-  color: black;
+
+.Nav__NavLink:hover {
+  color: red;
+  cursor: pointer;
 }
