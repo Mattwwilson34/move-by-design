@@ -2,7 +2,6 @@ import './Home.css';
 import React from 'react';
 import Section from '../../Components/Section';
 import Button from '../../Components/Button';
-import Footer from '../../Components/Footer';
 import Card from '../../Components/Card';
 import Brain from '../../Icons/brain-solid.svg';
 import Bolt from '../../Icons/bolt-solid.svg';
@@ -71,7 +70,6 @@ const Home = () => {
           </p>
         </Card>
       </Section>
-      <Footer />
     </div>
   );
 };
