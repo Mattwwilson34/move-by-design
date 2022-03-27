@@ -1,0 +1,35 @@
+:root {
+  --main-color-blue: #507dbc;
+}
+
+.Home__Hero__Section__Img {
+  background-color: var(--main-color-blue);
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.Home__Hero__Section__TextContainer {
+  position: relative;
+  top: -70vh;
+  left: 10vw;
+  max-width: 45ch;
+}
+
+.Home__FirstStatement__Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home__FirstStatement__Section__TextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  max-width: 75ch;
+}
