@@ -17,3 +17,11 @@ body {
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 {
+  line-height: 3.1875rem;
+}
+
+p {
+  line-height: 1.5rem;
+}
