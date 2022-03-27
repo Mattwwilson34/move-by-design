@@ -1,0 +1,23 @@
+.Home__Cards__Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+}
+
+.Home__Cards__Section__Card {
+  min-height: 70vh;
+  width: 30vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+
+.Home__Cards__Section__Card__Img {
+  width: 30%;
+  max-height: 20%;
+}
